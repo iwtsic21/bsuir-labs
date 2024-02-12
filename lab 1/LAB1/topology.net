@@ -1,0 +1,121 @@
+autostart = False
+version = 0.8.7
+[127.0.0.1:7200]
+    workingdir = C:\Users\um2ti\AppData\Local\Temp
+    udp = 10001
+    [[1721]]
+        image = D:\UNIVERSITY\6 sem\AKS\aks\GNS3\c1700-advipservicesk9-mz.124-15.T14.image
+        ram = 128
+        idlepc = 0x80718470
+        ghostios = True
+        chassis = 1721
+    [[ROUTER N8]]
+        model = 1721
+        console = 2104
+        aux = 2504
+        cnfg = configs\N8.cfg
+        wic0/0 = WIC-1ENET
+        wic0/1 = WIC-1ENET
+        e0 = N5 e0
+        e1 = N3 e1
+        f0 = N1 e0
+        x = 5.0
+        y = -106.0
+        z = 1.0
+    [[ROUTER N2]]
+        model = 1721
+        console = 2101
+        aux = 2501
+        cnfg = configs\N2.cfg
+        wic0/0 = WIC-1ENET
+        wic0/1 = WIC-1ENET
+        e0 = N4 e0
+        x = -623.0
+        y = -53.0
+        z = 1.0
+    [[ROUTER N4]]
+        model = 1721
+        console = 2102
+        aux = 2502
+        cnfg = configs\N4.cfg
+        wic0/0 = WIC-1ENET
+        wic0/1 = WIC-1ENET
+        e0 = N2 e0
+        e1 = N5 e1
+        x = -387.0
+        y = -32.0
+        z = 1.0
+    [[ROUTER N5]]
+        model = 1721
+        console = 2103
+        aux = 2503
+        cnfg = configs\N5.cfg
+        wic0/0 = WIC-1ENET
+        wic0/1 = WIC-1ENET
+        e0 = N8 e0
+        e1 = N4 e1
+        f0 = N6 e0
+        x = -161.0
+        y = -16.0
+        z = 1.0
+[127.0.0.1:7201]
+    workingdir = C:\Users\um2ti\AppData\Local\Temp
+    udp = 10101
+    [[1721]]
+        image = D:\UNIVERSITY\6 sem\AKS\aks\GNS3\c1700-advipservicesk9-mz.124-15.T14.image
+        ram = 128
+        idlepc = 0x80718470
+        ghostios = True
+        chassis = 1721
+    [[ROUTER N1]]
+        model = 1721
+        console = 2108
+        aux = 2508
+        cnfg = configs\N1.cfg
+        wic0/0 = WIC-1ENET
+        wic0/1 = WIC-1ENET
+        e0 = N8 f0
+        e1 = N7 f0
+        f0 = N6 f0
+        x = 98.0
+        y = 61.0
+        z = 1.0
+    [[ROUTER N3]]
+        model = 1721
+        console = 2105
+        aux = 2505
+        cnfg = configs\N3.cfg
+        wic0/0 = WIC-1ENET
+        wic0/1 = WIC-1ENET
+        e0 = N7 e0
+        e1 = N8 e1
+        x = 221.0
+        y = -82.0
+        z = 1.0
+    [[ROUTER N6]]
+        model = 1721
+        console = 2106
+        aux = 2506
+        wic0/0 = WIC-1ENET
+        wic0/1 = WIC-1ENET
+        e0 = N5 f0
+        e1 = N7 e1
+        f0 = N1 f0
+        x = -6.0
+        y = 201.0
+        z = 1.0
+    [[ROUTER N7]]
+        model = 1721
+        console = 2107
+        aux = 2507
+        cnfg = configs\N7.cfg
+        wic0/0 = WIC-1ENET
+        wic0/1 = WIC-1ENET
+        e0 = N3 e0
+        e1 = N6 e1
+        f0 = N1 e1
+        x = 244.0
+        y = 189.0
+        z = 1.0
+[GNS3-DATA]
+    configs = configs
